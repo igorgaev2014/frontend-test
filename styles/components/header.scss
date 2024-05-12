@@ -1,0 +1,140 @@
+.header {
+  @extend %d-flex-row-center-space-between;
+  gap: 24px;
+  background: $color-dark;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 12px 16px;
+  }
+
+  &__pages-list {
+    @extend %d-flex-row-center-space-between;
+
+    @media (max-width: $tablet-width) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: $color-dark;
+      width: 100%;
+      padding: 14px 0;
+    }
+  }
+
+  &__pages-item {
+    @media (max-width: $tablet-width) {
+      padding: 0 8px;
+      flex: 1 1 auto;
+
+      a, button {
+        font-size: $font-description;
+      }
+    }
+
+    &--search,
+    &--favorites {
+      display: none;
+
+      @media (max-width: $tablet-width) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__pages-link {
+    color: $color-secondary;
+    font-size: $font-paragraph;
+
+    svg {
+      display: none;
+    }
+
+    @media (max-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+
+    @media (max-width: $tablet-width) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__bookmark-btn {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__search {
+    font-size: $font-paragraph;
+    font-weight: 300;
+    color: $header-search-input;
+    @extend %d-flex-row-center-space-between;
+    gap: 16px;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+      top: 67px;
+      left: 0;
+      width: 100%;
+      position: fixed;
+      background: #080808;
+      padding: 8px 16px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 51px;
+    }
+
+    input {
+      background: transparent;
+      margin-right: 24px;
+    }
+
+    &--visible {
+      display: flex;
+    }
+  }
+
+  &__search-wrapper {
+    background: $color-primary;
+    border-radius: 4px;
+    padding: 8px;
+    @extend %d-flex-row-center-space-between;
+    position: relative;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  &__search-clear-btn {
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    &--text {
+      color: $color-white;
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+  }
+}

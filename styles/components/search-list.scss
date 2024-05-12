@@ -1,0 +1,26 @@
+.search-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h3 {
+      font-weight: 400;
+    }
+  }
+}

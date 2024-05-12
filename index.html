@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+				rel="stylesheet">
+	<link rel="stylesheet" href="styles/style.css">
+	<title>OMDb Test App</title>
+</head>
+<body>
+
+<header class="header">
+	<div class="d-flex flex-row align-center justify-space-between gap-6">
+		<button type="button" class="header__burger">
+			<svg class="icon">
+				<use xlink:href="images/sprite.svg#Type=Menu"></use>
+			</svg>
+		</button>
+		<svg class="icon icon--logo">
+			<use xlink:href="images/sprite.svg#logo"></use>
+		</svg>
+	</div>
+	<ul class="header__pages-list gap-6">
+		<li class="header__pages-item">
+			<a href="" class="header__pages-link">
+				<svg class="icon">
+					<use xlink:href="images/sprite.svg#Type=Home"></use>
+				</svg>
+				<span>Главная</span>
+			</a>
+		</li>
+		<li class="header__pages-item">
+			<a href="" class="header__pages-link">
+				<svg class="icon">
+					<use xlink:href="images/sprite.svg#Type=Movie"></use>
+				</svg>
+				<span>Фильмы</span></a>
+		</li>
+		<li class="header__pages-item">
+			<a href="" class="header__pages-link">
+				<svg class="icon">
+					<use xlink:href="images/sprite.svg#Type=Series"></use>
+				</svg>
+				<span>Сериалы</span></a>
+		</li>
+		<li class="header__pages-item header__pages-item--search">
+			<button id="mobile-search-btn" class="header__pages-link">
+				<svg class="icon">
+					<use xlink:href="images/sprite.svg#Type=Search"></use>
+				</svg>
+				<span>Поиск</span></button>
+		</li>
+		<li class="header__pages-item header__pages-item--favorites">
+			<a href="" class="header__pages-link">
+				<svg class="icon">
+					<use xlink:href="images/sprite.svg#Type=Bookmark"></use>
+				</svg>
+				<span>Избранное</span></a>
+		</li>
+	</ul>
+	<div class="d-flex flex-row align-center justify-space-between gap-6">
+		<div class="header__search">
+			<div class="header__search-wrapper">
+				<svg class="icon icon--search">
+					<use xlink:href="images/sprite.svg#Type=Search"></use>
+				</svg>
+				<label>
+					<input type="text" class="form-control" placeholder="Поиск по сайту" id="movie-search-box">
+					<button type="button" class="header__search-clear-btn">
+						<svg class="icon icon--search">
+							<use xlink:href="images/sprite.svg#Type=Cancel"></use>
+						</svg>
+					</button>
+				</label>
+			</div>
+			<button type="button" class="header__search-clear-btn header__search-clear-btn--text">Очистить</button>
+		</div>
+		<button type="button" class="header__bookmark-btn">
+			<svg class="icon">
+				<use xlink:href="images/sprite.svg#Type=Bookmark"></use>
+			</svg>
+		</button>
+		<div class="d-flex flex-row align-center justify-space-between">
+			<img class="header__avatar" src="images/avatar.png" alt=""/>
+			<svg class="icon">
+				<use xlink:href="images/sprite.svg#Type=Arrow"></use>
+			</svg>
+		</div>
+	</div>
+</header>
+
+<main>
+	<div class="wrapper">
+		<div class="search-list" id="search-list">
+		</div>
+	</div>
+</main>
+
+<div class="result-grid" id="result-grid">
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

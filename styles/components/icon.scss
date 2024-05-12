@@ -1,0 +1,16 @@
+.icon {
+  width: 24px;
+  height: 24px;
+
+  &--logo {
+    width: 123px;
+    height: 22px;
+  }
+
+  &--search {
+    width: 16px;
+    height: 16px;
+    color: $color-secondary;
+    margin-right: 8px;
+  }
+}
